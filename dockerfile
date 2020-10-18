@@ -1,6 +1,5 @@
 FROM python:3.9.0-alpine3.12
-WORKDIR .
-COPY . .
+WORKDIR /app
+COPY . /app
 RUN python -m pip install --upgrade pip
-EXPOSE 80
 CMD ["python", "./guess_game.py"]
