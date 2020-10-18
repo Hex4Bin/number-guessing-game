@@ -1,11 +1,11 @@
-"""
-This is a number guessing game!
-"""
+""" This is a number guessing game! """
 
 import random
+import os
 
 
 class GuessGame:
+    """ This class handles the guess objects. """
 
     def __init__(self, minNum, maxNum):
         self.number = 0
@@ -39,6 +39,7 @@ class GuessGame:
 
     def play(self):
         """ Game logic """
+        os.system('cls' if os.name == 'nt' else 'clear')
         game.rand()
         while True:
             guess = self.get_guess()
